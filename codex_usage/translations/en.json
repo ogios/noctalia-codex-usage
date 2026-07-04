@@ -1,0 +1,20 @@
+{
+  "settings.auth_file.label": "Auth file",
+  "settings.auth_file.description": "Path to the Codex auth JSON file. The default reads ~/.codex/auth.json.",
+  "settings.endpoint.label": "Usage endpoint",
+  "settings.endpoint.description": "ChatGPT backend endpoint used to query Codex usage.",
+  "settings.request_delay_seconds.label": "Request delay seconds",
+  "settings.request_delay_seconds.description": "Seconds to wait after each completed usage request before starting the next one.",
+  "settings.show_account.label": "Show account",
+  "settings.show_account.description": "Show the account email in the widget tooltip.",
+  "settings.gauge_char.description": "One character used for this gauge level. Use custom font glyphs here if desired.",
+  "settings.gauge_0.label": "Gauge 0/8",
+  "settings.gauge_1.label": "Gauge 1/8",
+  "settings.gauge_2.label": "Gauge 2/8",
+  "settings.gauge_3.label": "Gauge 3/8",
+  "settings.gauge_4.label": "Gauge 4/8",
+  "settings.gauge_5.label": "Gauge 5/8",
+  "settings.gauge_6.label": "Gauge 6/8",
+  "settings.gauge_7.label": "Gauge 7/8",
+  "settings.gauge_8.label": "Gauge 8/8"
+}

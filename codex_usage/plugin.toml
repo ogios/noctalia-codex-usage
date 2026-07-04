@@ -1,0 +1,112 @@
+id = "ogios/codex_usage"
+name = "Codex Usage"
+version = "1.0.0"
+min_noctalia = "5.0.0"
+author = "ogios"
+license = "MIT"
+dependencies = []
+tags = ["codex", "usage", "productivity"]
+icon = "brand-openai"
+description = "Show remaining Codex usage for the 5-hour and weekly windows."
+
+[[setting]]
+key = "auth_file"
+type = "string"
+label_key = "settings.auth_file.label"
+description_key = "settings.auth_file.description"
+default = "~/.codex/auth.json"
+
+[[setting]]
+key = "endpoint"
+type = "string"
+label_key = "settings.endpoint.label"
+description_key = "settings.endpoint.description"
+default = "https://chatgpt.com/backend-api/wham/usage"
+advanced = true
+
+[[setting]]
+key = "request_delay_seconds"
+type = "int"
+label_key = "settings.request_delay_seconds.label"
+description_key = "settings.request_delay_seconds.description"
+default = 30
+min = 1
+max = 3600
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[widget]]
+id = "usage"
+entry = "widget.luau"
+
+[[widget.setting]]
+key = "show_account"
+type = "bool"
+label_key = "settings.show_account.label"
+description_key = "settings.show_account.description"
+default = false
+
+[[widget.setting]]
+key = "gauge_0"
+type = "string"
+label_key = "settings.gauge_0.label"
+description_key = "settings.gauge_char.description"
+default = "⠀"
+
+[[widget.setting]]
+key = "gauge_1"
+type = "string"
+label_key = "settings.gauge_1.label"
+description_key = "settings.gauge_char.description"
+default = "▁"
+
+[[widget.setting]]
+key = "gauge_2"
+type = "string"
+label_key = "settings.gauge_2.label"
+description_key = "settings.gauge_char.description"
+default = "▂"
+
+[[widget.setting]]
+key = "gauge_3"
+type = "string"
+label_key = "settings.gauge_3.label"
+description_key = "settings.gauge_char.description"
+default = "▃"
+
+[[widget.setting]]
+key = "gauge_4"
+type = "string"
+label_key = "settings.gauge_4.label"
+description_key = "settings.gauge_char.description"
+default = "▄"
+
+[[widget.setting]]
+key = "gauge_5"
+type = "string"
+label_key = "settings.gauge_5.label"
+description_key = "settings.gauge_char.description"
+default = "▅"
+
+[[widget.setting]]
+key = "gauge_6"
+type = "string"
+label_key = "settings.gauge_6.label"
+description_key = "settings.gauge_char.description"
+default = "▆"
+
+[[widget.setting]]
+key = "gauge_7"
+type = "string"
+label_key = "settings.gauge_7.label"
+description_key = "settings.gauge_char.description"
+default = "▇"
+
+[[widget.setting]]
+key = "gauge_8"
+type = "string"
+label_key = "settings.gauge_8.label"
+description_key = "settings.gauge_char.description"
+default = "█"
