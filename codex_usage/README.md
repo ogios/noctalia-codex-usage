@@ -8,9 +8,9 @@ The plugin reads your local Codex authentication file and queries ChatGPT's Code
 
 ## Showcase
 
-| Widget                                                                | Details                                                                        |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| ![Codex Usage widget](showcase/screenshot_20260704_205234-region.png) | ![Codex Usage details](showcase/Screenshot%20from%202026-07-04%2020-52-46.png) |
+| Widget                                 | Details                                 |
+| -------------------------------------- | --------------------------------------- |
+| ![Codex Usage widget](showcase/1.webp) | ![Codex Usage details](showcase/2.webp) |
 
 ## Features
 
