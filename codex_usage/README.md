@@ -1,8 +1,16 @@
+Please refer to the documentation for [noctalia](https://github.com/noctalia-dev/noctalia) on how to install the plugin.
+
 # Codex Usage
 
 Shows remaining Codex usage in the Noctalia bar for the 5-hour and weekly windows, including each window's reset countdown.
 
 The plugin reads your local Codex authentication file and queries ChatGPT's Codex usage endpoint.
+
+## Showcase
+
+| Widget                                                                | Details                                                                        |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![Codex Usage widget](showcase/screenshot_20260704_205234-region.png) | ![Codex Usage details](showcase/Screenshot%20from%202026-07-04%2020-52-46.png) |
 
 ## Features
 
