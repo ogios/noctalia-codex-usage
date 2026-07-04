@@ -6,12 +6,6 @@ Shows remaining Codex usage in the Noctalia bar for the 5-hour and weekly window
 
 The plugin reads your local Codex authentication file and queries ChatGPT's Codex usage endpoint.
 
-## Showcase
-
-| Widget                                 | Details                                 |
-| -------------------------------------- | --------------------------------------- |
-| ![Codex Usage widget](showcase/1.webp) | ![Codex Usage details](showcase/2.webp) |
-
 ## Features
 
 - Displays remaining usage for the 5-hour window.
