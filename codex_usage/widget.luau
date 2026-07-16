@@ -18,23 +18,24 @@ local function formatPercent(value)
     return `{math.floor(number + 0.5)}%`
 end
 
+local defaultGlyphs = { "⠀", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" }
+
+local function getGlyph(index)
+    local ok, result = pcall(barWidget.getConfig, barWidget, "gauge_" .. index)
+    if ok and result ~= nil then return result end
+    return defaultGlyphs[index + 1] or "⠀"
+end
+
 local function gauge(value)
     local number = tonumber(value)
-    if number == nil then return barWidget.getConfig("gauge_0") or "⠀" end
+    if number == nil then return getGlyph(0) end
     if number < 0 then number = 0 end
     if number > 100 then number = 100 end
 
-    local glyphs = {
-        barWidget.getConfig("gauge_0") or "⠀",
-        barWidget.getConfig("gauge_1") or "▁",
-        barWidget.getConfig("gauge_2") or "▂",
-        barWidget.getConfig("gauge_3") or "▃",
-        barWidget.getConfig("gauge_4") or "▄",
-        barWidget.getConfig("gauge_5") or "▅",
-        barWidget.getConfig("gauge_6") or "▆",
-        barWidget.getConfig("gauge_7") or "▇",
-        barWidget.getConfig("gauge_8") or "█",
-    }
+    local glyphs = {}
+    for i = 0, 8 do
+        glyphs[i + 1] = getGlyph(i)
+    end
     local index = math.floor((number / 100) * (#glyphs - 1) + 1.5)
     return glyphs[index]
 end
@@ -99,7 +100,8 @@ local function tooltipRows()
         { key = "Plan", value = tostring(status.plan_type or "unknown") },
     }
 
-    if barWidget.getConfig("show_account") then
+    local ok, showAccount = pcall(barWidget.getConfig, barWidget, "show_account")
+    if ok and showAccount then
         table.insert(rows, { key = "Account", value = tostring(status.email or "unknown") })
     end
 
