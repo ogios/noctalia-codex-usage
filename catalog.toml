@@ -13,5 +13,5 @@ author = "ogios"
 license = "MIT"
 icon = "brand-openai"
 description = "Show remaining Codex usage for the 5-hour and weekly windows."
-min_noctalia = "5.0.0"
+plugin_api = 3
 tags = ["codex", "usage", "productivity"]

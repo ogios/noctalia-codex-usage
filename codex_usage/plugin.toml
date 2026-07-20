@@ -1,7 +1,7 @@
 id = "ogios/codex_usage"
 name = "Codex Usage"
 version = "1.0.0"
-min_noctalia = "5.0.0"
+plugin_api = 3
 author = "ogios"
 license = "MIT"
 dependencies = []
